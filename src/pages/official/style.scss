@@ -1,0 +1,885 @@
+.container {
+  position: relative;
+
+  .showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    gap: 40px;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: white;
+
+    .nav {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      input {
+        display: none;
+
+        &:checked+ul {
+          transform: translateX(0);
+        }
+      }
+
+      ul {
+        position: relative;
+        box-shadow: 2px 2px 20px #6c6c6c;
+
+        .abs {
+          position: absolute;
+          top: 30px;
+          right: -20%;
+          color: white;
+          border: 2px solid white;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          font-size: 15px;
+          transition: 0.4s;
+
+          &:hover {
+            background: #ffffff3b;
+          }
+
+        }
+
+        transition: 0.6s;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        background: whitesmoke;
+        color: #000;
+        gap: 20px;
+        width: 35%;
+        position: absolute;
+        top: -10px;
+        height: 96vh;
+        padding: 20px;
+        padding-top: 100px;
+        left: -60px;
+
+        li {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 10px;
+          border-radius: 10px;
+          transition: 0.4s;
+
+          &:first-child {
+            background: #00000034;
+          }
+
+          &:hover {
+            background: #00000021;
+          }
+
+          h2 {
+            display: inline-block;
+          }
+
+          p {
+            display: inline-block;
+          }
+        }
+      }
+
+      img {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        display: none;
+      }
+
+      .poe {
+        width: 280px;
+        color: white;
+        fill: rgb(251, 252, 255);
+      }
+
+      button {
+        label {
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
+          align-items: center;
+        }
+
+        border: none;
+        background: none;
+        padding: 20px;
+
+        font-size: 15px;
+        align-items: center;
+        color: white;
+      }
+    }
+
+    .ok {
+      align-self: start;
+      justify-self: end;
+      margin-top: 100px;
+      margin-left: 50px;
+
+      .info {
+        width: 50%;
+        font-size: 40px;
+        margin-right: auto;
+        align-self: start;
+
+        h1 {
+          width: 600px;
+        }
+
+        button {
+          border: 1px solid white;
+          padding: 10px;
+          border-radius: 5px;
+          background: none;
+          color: white;
+          font-size: 17px;
+          transition: 0.4s;
+
+          &:hover {
+            // filter: blur(1px);
+            background: #fefefe42;
+          }
+        }
+      }
+
+    }
+
+
+
+
+  }
+
+  overflow: hidden;
+  height: 95vh;
+
+  .vid-bg {
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: -230px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 100px;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    margin-top: 60px;
+    background: url("https://images-porsche.imgix.net/-/media/190DB57A293648469B843364612D22FD_DA4790710D1D4CFD8495A0EB382142AC_PCNA---Macan-BEV---1?h=1920&amp;iar=0&amp;w=2560&amp;q=80&amp;crop=faces%2Centropy%2Cedges&amp;auto=format");
+    width: 300px;
+    height: 200px;
+    background-position: center;
+    background-size: 500px;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 0.5s;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+
+    &:nth-child(2) {
+      background: url("https://images-porsche.imgix.net/-/media/3E35E9D9BCD14B13A41EC249CF567B3D_27C876BA6A2D4539B71918E29DF87507_KW08---PCNA---Porsche-Drive?h=1920&amp;iar=0&amp;w=2560&amp;q=80&amp;crop=faces%2Centropy%2Cedges&amp;auto=format");
+      background-size: 400px;
+      background-position: center;
+
+      &:hover {
+        background-size: 450px;
+      }
+    }
+
+    &:last-child {
+      background: url("https://images-porsche.imgix.net/-/media/A612F347D7134082AD27778080D43525_8FE79C1E3ECD40A59CE6F0068210CA45_KW13---PCNA---Macan-BEV---Insiders-Newsletter?h=1920&amp;iar=0&amp;w=2560&amp;q=80&amp;crop=faces%2Centropy%2Cedges&amp;auto=format");
+      background-size: 400px;
+      background-position: center;
+
+      &:hover {
+        background-size: 450px;
+      }
+    }
+
+    &:hover {
+      background-size: 550px;
+
+    }
+
+    .text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.modules {
+  margin-top: 60px;
+
+  .title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+  }
+
+  .crds {
+    display: grid;
+    // grid-template-columns: 1fr 1fr;
+    padding: 10px 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+
+    a {
+      .cad {
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background: linear-gradient(#00000021, #00000081), url("https://images-porsche.imgix.net/-/media/54CFD951A0F3417FB158619939ACF7B9_B7A7FDA3B193477785BFAD3F75D8DECD_718---Mobile?iar=0&amp;w=407&amp;ar=9%3A16&amp;q=85&amp;auto=format%201x,https://images-porsche.imgix.net/-/media/54CFD951A0F3417FB158619939ACF7B9_B7A7FDA3B193477785BFAD3F75D8DECD_718---Mobile?iar=0&amp;w=407&amp;ar=9%3A16&amp;q=45&amp;dpr=2&amp;auto=format%202x");
+        width: 500px;
+        height: 635px;
+        background-position: center;
+        background-size: 500px;
+        color: white;
+        font-family: "Monserrat", sans-serif;
+        padding: 30px;
+        transition: 0.4s;
+
+        &:hover {
+          background-size: 550px;
+        }
+
+
+
+        .top-left {
+          font-family: "Whisper", cursive;
+          font-size: 40px;
+        }
+
+
+        .info {
+          margin-top: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          .txt {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          .btn {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            button {
+              background: white;
+              border: none;
+              border-radius: 10px;
+              padding: 20px;
+              font-size: 17px;
+              transition: 0.4s;
+
+              &:hover {
+                background: #eaeaeab5;
+              }
+
+              &:last-child {
+                background: none;
+                border: 1px solid white;
+                color: white;
+                transition: 0.4s;
+
+                &:hover {
+                  background: #efefef5c;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    a {
+      .one {
+        background: url("https://images-porsche.imgix.net/-/media/3558EAFF2D014618A38376442BA9BD77_1AB06CB0AFBB44A697885812E2918289_911---Mobile?iar=0&w=407&ar=9%3A16&q=85&auto=format%201x,https://images-porsche.imgix.net/-/media/3558EAFF2D014618A38376442BA9BD77_1AB06CB0AFBB44A697885812E2918289_911---Mobile?iar=0&w=407&ar=9%3A16&q=45&dpr=2&auto=format%202x");
+        background-position: center;
+        background-size: 500px;
+
+        &:hover {
+          background-size: 550px;
+        }
+
+
+        .top-left {
+          font-family: "Seymour One", sans-serif;
+          font-size: 30px;
+        }
+      }
+
+    }
+
+    a {
+      .uno {
+        background: url("https://images-porsche.imgix.net/-/media/CBF2A58C342F4EE5BACB3277178491C1_52AB5D0B85494962B151DCF0D584821E_Tokyo---Mobile?iar=0&w=407&ar=9%3A16&q=85&auto=format%201x,https://images-porsche.imgix.net/-/media/CBF2A58C342F4EE5BACB3277178491C1_52AB5D0B85494962B151DCF0D584821E_Tokyo---Mobile?iar=0&w=407&ar=9%3A16&q=45&dpr=2&auto=format%202x1");
+        background-position: center;
+        background-size: 500px;
+
+        &:hover {
+          background-size: 550px;
+        }
+      }
+
+      
+
+    }
+    a{
+      .two {
+        background: url("https://images-porsche.imgix.net/-/media/3EF0D82D4B1D400D8793C77E183C0E53_9683E0EEAA9E4609B6D3C0C7F0F49F91_Panamera---Mobile?iar=0&w=407&ar=9%3A16&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/3EF0D82D4B1D400D8793C77E183C0E53_9683E0EEAA9E4609B6D3C0C7F0F49F91_Panamera---Mobile?iar=0&w=407&ar=9%3A16&q=45&dpr=2&auto=format 2x");
+        background-position: center;
+        background-size: 500px;
+
+        &:hover {
+          background-size: 550px;
+        }
+      }
+
+      
+    }
+    a{
+      .tre{
+        background: url("https://images-porsche.imgix.net/-/media/77EB2C62CE774603BC3F3E7608D825B4_B15900D011F04A95994B0724CD421D8B_Berlin---Mobile?iar=0&w=407&ar=9%3A16&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/77EB2C62CE774603BC3F3E7608D825B4_B15900D011F04A95994B0724CD421D8B_Berlin---Mobile?iar=0&w=407&ar=9%3A16&q=45&dpr=2&auto=format 2x");
+        background-position: center;
+        background-size: 500px;
+
+        &:hover {
+          background-size: 550px;
+        }
+      }
+
+      
+    }
+    a{
+      .for {
+        background: url("https://images-porsche.imgix.net/-/media/7F1AD532955347949B29A4D9C29A4C27_23377A1E50F640948CA45B9948AE2C76_Cayenne---Mobile?iar=0&w=407&ar=9%3A16&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/7F1AD532955347949B29A4D9C29A4C27_23377A1E50F640948CA45B9948AE2C76_Cayenne---Mobile?iar=0&w=407&ar=9%3A16&q=45&dpr=2&auto=format 2x");
+        background-position: center;
+        background-size: 500px;
+
+        &:hover {
+          background-size: 550px;
+        }
+      }
+    }
+  }
+}
+
+.eaz {
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+  margin-top: 100px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 30px;
+  margin-top: 100px;
+
+  .info {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    padding: 20px;
+    background: #000;
+    color: white;
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    justify-content: center;
+
+    button {
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      background: none;
+      font-size: 17px;
+      transition: 0.4s;
+      background: #fff;
+
+
+      &:hover {
+        // filter: blur(1px);
+        background: #fefefe42;
+      }
+    }
+  }
+
+  img {
+    width: 600px;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+.unno {
+  display: flex;
+  flex-direction: row;
+  // padding: 30px
+  padding: 80px;
+  position: relative;
+  margin-top: 100px;
+
+  .find {
+    width: 50%;
+    margin-left: 100px;
+    justify-self: center;
+    align-self: start;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+
+    .sear {
+      display: flex;
+      padding: 0 10px;
+      flex-direction: row;
+      align-items: center;
+      border: 1px solid black;
+      width: 60%;
+      border-radius: 7px;
+
+      input {
+        border: none;
+        outline: none;
+        padding: 20px;
+      }
+    }
+  }
+
+  img {
+    width: 700px;
+    align-self: end;
+    position: absolute;
+    top: 0px;
+    right: -80px;
+  }
+
+  overflow: hidden;
+}
+
+.slider {
+  margin-top: 70px;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 30px;
+  font-family: "Montserrat", sans-serif;
+  --swiper-pagination-color: rgb(42, 42, 44);
+
+  // --swiper-pagination-bottom: -100px;
+  .title {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .fap {
+    border-radius: 20px !important;
+    height: 400px;
+
+    img {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .txt {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+      font-size: 17px;
+      padding: 10px;
+
+
+
+      button {
+        border: none;
+        font-size: 18px;
+        // width: 60px;
+        // height: 30px;
+        background: none;
+        margin-top: auto;
+      }
+    }
+
+    transition: 0.4s;
+
+    &:hover {
+      background: #0000002f;
+    }
+  }
+}
+
+.cont {
+  margin-top: 100px;
+
+  .title {
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .cards {
+    margin: 0 !important;
+
+    .uno {
+      background: url("https://images-porsche.imgix.net/-/media/CC3E01768A9348549F184A925089E1BE_4256E9AE9BB446E8839A47ED4BAF9196_16-9_PCNA-Experience_1920x1080?iar=0&w=407&ar=16%3A9&q=85&auto=format%201x,https://images-porsche.imgix.net/-/media/CC3E01768A9348549F184A925089E1BE_4256E9AE9BB446E8839A47ED4BAF9196_16-9_PCNA-Experience_1920x1080?iar=0&w=407&ar=16%3A9&q=45&dpr=2&auto=format%202x");
+      background-position: center;
+      background-size: 440px;
+
+      &:hover {
+        background-size: 500px;
+      }
+
+    }
+
+    .tor {
+      background: url("https://images-porsche.imgix.net/-/media/D398CF647E9D4843B6DEA6DA91B7B9C9_00922164F22F4FC09A396D79A507001D_16-9_PCNA-Approved_1920x1080?iar=0&w=407&ar=16%3A9&q=85&auto=format%201x,https://images-porsche.imgix.net/-/media/D398CF647E9D4843B6DEA6DA91B7B9C9_00922164F22F4FC09A396D79A507001D_16-9_PCNA-Approved_1920x1080?iar=0&w=407&ar=16%3A9&q=45&dpr=2&auto=format%202x");
+      background-size: 400px;
+      background-position: center;
+    }
+
+    .des {
+      background: url("https://images-porsche.imgix.net/-/media/BE8AED875F8A4A32900595C3F4B9EF74_E612D11F81DC4908A9733617E54F16DD_16-9_PCNA-MoSpo_1920x1080?iar=0&w=407&ar=16%3A9&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/BE8AED875F8A4A32900595C3F4B9EF74_E612D11F81DC4908A9733617E54F16DD_16-9_PCNA-MoSpo_1920x1080?iar=0&w=407&ar=16%3A9&q=45&dpr=2&auto=format 2x");
+      background-size: 400px;
+      background-position: center;
+    }
+  }
+
+}
+
+.footer {
+  background: rgb(23, 23, 30);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 30px;
+
+  .newseller {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 50px;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      button {
+        width: 300px;
+        background: white;
+        color: #000;
+        border: none;
+        padding: 10px;
+        font-size: 17px;
+        border-radius: 5px;
+        transition: 0.5s;
+
+        &:hover {
+          background: #7a7575;
+        }
+
+      }
+
+      .btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          width: auto !important;
+          font-size: 20px;
+
+        }
+
+      }
+    }
+  }
+
+  .uls {
+    margin-top: 40px;
+
+    .title {
+      display: block !important;
+      color: white;
+      font-size: 20px;
+    }
+
+    .body {
+      margin: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 30px;
+
+      ul {
+        li {
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+    .links {
+      * {
+        display: inline-block;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+    }
+
+    .poe {
+      color: white;
+      fill: white;
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 50px;
+
+    }
+  }
+}
+
+
+
+@media (max-width:890px) {
+  .showcase {
+    padding: 30px;
+    height: auto;
+    width: 100% !important;
+
+    .nav {
+
+      ul {
+        width: 80% !important;
+        padding-left: 50px !important;
+      }
+    }
+
+    .ok {
+      margin-left: 10px;
+      width: 100%;
+
+      .info {
+        width: 100%;
+
+        h1 {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .cards {
+    flex-direction: column;
+
+    .card {
+      width: 100%;
+      background-size: cover !important;
+      background-position: center !important;
+      width: 100%;
+      height: 400px !important;
+      // &:nth-child(2){
+      //   background-position: center -20px !important;
+      // }
+      // &:last-child{
+      //   background-position: center -50px !important;
+      // }
+    }
+  }
+
+  .modules {
+    .cad {
+      width: 100%;
+    }
+  }
+
+  .eaz {
+    flex-direction: column;
+    align-items: stretch !important;
+    justify-content: center;
+    background: #000 !important;
+
+    .info {
+      text-align: center;
+      justify-content: center;
+      align-items: stretch;
+      background: none;
+      border-radius: 0px !important;
+    }
+
+    img {
+      border-radius: 10px !important;
+      width: 100% !important;
+    }
+  }
+
+  .unno {
+    flex-direction: column;
+    padding: 20px !important;
+    text-align: center;
+
+    .find {
+      margin: 10px !important;
+      width: 100% !important;
+
+      .sear {
+        margin: 0 auto;
+      }
+    }
+
+    img {
+      position: relative;
+    }
+  }
+
+  .slider {
+    padding: 30px !important;
+
+    .fap {
+      height: auto;
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+
+    .newseller {
+      flex-wrap: wrap;
+
+    }
+  }
+
+}
+
+@media (max-width:550px) {
+  .container {
+    .vid-bg {
+      left: -500px !important;
+    }
+
+    .showcase {
+      ul {
+        width: 90% !important;
+      }
+
+      .nav {
+        // text-align: center;
+        align-items: center;
+
+
+        label {
+          p {
+            display: none;
+          }
+        }
+
+
+        .poe {
+          display: none;
+        }
+
+        img {
+          display: block;
+        }
+      }
+
+      .ok {
+        margin: 0 !important;
+        width: 100% !important;
+        margin-top: 300px !important;
+
+        .info {
+          font-size: 20px !important;
+          gap: 20px !important;
+          display: flex;
+          flex-direction: column;
+
+          h1 {
+            width: 100% !important;
+          }
+
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  .cards {
+    padding: 10px !important;
+
+    .card {
+      width: 100%;
+
+    }
+  }
+  .crds{
+    a{
+      width: 90% !important;
+      margin: 0 auto;
+        *{
+          width: 100% !important;
+        }
+    }
+  }
+}
